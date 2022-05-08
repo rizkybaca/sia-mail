@@ -24,17 +24,17 @@
                     <label for="kurikulum_id">Kurikulum</label>
                     <select name="kurikulum_id" class="form-control" id="kurikulum_id">
                         <option>- pilih kurikulum -</option>
-                        <?php 
+                        <?php
                         include '../helper/index_kurikulum.php';
-                        if($cek > 0) :
+                        if ($cek > 0) :
                             //ambil data seluruh kurikulum
                             while ($key = mysqli_fetch_assoc($data)) :
-                                ?>
-                            <option value="<?= $key['id_kurikulum']; ?>"><?= $key['nama_kurikulum']; ?></option>
-                        <?php endwhile;?>
+                        ?>
+                                <option value="<?= $key['id_kurikulum']; ?>"><?= $key['nama_kurikulum']; ?></option>
+                            <?php endwhile; ?>
                         <?php else : ?>
                             <option>-tidak ada data-</option>
-                            <?php endif;?>
+                        <?php endif; ?>
                     </select>
                 </div>
 
@@ -42,36 +42,41 @@
                     <label for="jenjang_id">jenjang</label>
                     <select name="jenjang_id" class="form-control" id="jenjang_id">
                         <option>- pilih jenjang -</option>
-                        <?php 
+                        <?php
                         include '../helper/index_jenjang.php';
-                        if($cek > 0) :
+                        if ($cek > 0) :
                             //ambil data seluruh jenjang
                             while ($key = mysqli_fetch_assoc($data)) :
-                                ?>
-                            <option value="<?= $key['id_jenjang']; ?>"><?= $key['nama_jenjang']; ?></option>
-                        <?php endwhile;?>
+                        ?>
+                                <option value="<?= $key['id_jenjang']; ?>"><?= $key['nama_jenjang']; ?></option>
+                            <?php endwhile; ?>
                         <?php else : ?>
                             <option>-tidak ada data-</option>
-                            <?php endif;?>
+                        <?php endif; ?>
                     </select>
                 </div>
 
                 <div class="form-group">
-                    <label for="guru_id">Guru</label>
-                    <select name="guru_id" class="form-control" id="guru_id">
+                    <label for="guru_nip">Guru</label>
+                    <select name="guru_nip" class="form-control" id="guru_nip">
                         <option>- pilih guru -</option>
-                        <?php 
+                        <?php
                         include '../helper/index_guru.php';
-                        if($cek > 0) :
+                        if ($cek > 0) :
                             //ambil data seluruh guru
                             while ($key = mysqli_fetch_assoc($data)) :
-                                ?>
-                            <option value="<?= $key['id_guru']; ?>"><?= $key['nama_guru']; ?></option>
-                        <?php endwhile;?>
+                        ?>
+                                <option value="<?= $key['nip']; ?>"><?= $key['nama_guru']; ?></option>
+                            <?php endwhile; ?>
                         <?php else : ?>
                             <option>-tidak ada data-</option>
-                            <?php endif;?>
+                        <?php endif; ?>
                     </select>
+                </div>
+                <div class="form-group">
+                    <label for="singkatan_mapel">Singkatan Nama Pelajaran</label>
+                    <input autofocus required name="singkatan_mapel" type="text" class="form-control" id="singkatan_mapel" placeholder="masukkan singkatan nama pelajaran">
+                    <small id="singkatan_mapel" class="form-text text-muted">contoh: MTK, BHSIND, BHSING, BHSJW, PKN, dsb.</small>
                 </div>
                 <br>
                 <button type="submit" class="btn btn-primary">Simpan</button>

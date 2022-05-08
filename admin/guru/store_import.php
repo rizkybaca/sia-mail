@@ -53,7 +53,7 @@ while(!feof($file)) //cari akhir baris csv
             $telepon = htmlspecialchars($data[5]);
             $alamat = htmlspecialchars($data[6]);
 
-            $result=mysqli_query($conn, "INSERT INTO `guru` (`nama_guru`,`nip`,`kode_guru`,`email`,`password`,`telepon`,`alamat`) VALUES ('$nama_guru','$nip','$kode_guru','$email','$pass','$telepon','$alamat')");
+            $result=mysqli_query($conn, "REPLACE INTO `guru` (`nama_guru`,`nip`,`kode_guru`,`email`,`password`,`telepon`,`alamat`) VALUES ('$nama_guru','$nip','$kode_guru','$email','$pass','$telepon','$alamat')");
 
             if ($result) {
                 //kirim email
@@ -75,5 +75,3 @@ $pesan = "Data berhasil diimpor";
 $url = "../index.php?page=guru-index";
 
 echo "<script>alert('$pesan');location='$url';</script>";
-
-?>

@@ -12,20 +12,28 @@ require '../../vendor/autoload.php';
 $mail = new PHPMailer(true);
 
 try {
-    
+
     // $phpmailer = new PHPMailer();
     $mail->isSMTP();
-    $mail->Host = 'smtp.mailtrap.io';
+
+    // $mail->Host = 'smtp.mailtrap.io';
+    // $mail->SMTPAuth = true;
+    // $mail->Port = 2525;
+    // $mail->Username = '4e91322af77057';
+    // $mail->Password = '3635bdb35383da';
+
+    $mail->Host = 'smtp.gmail.com';
     $mail->SMTPAuth = true;
-    $mail->Port = 2525;
-    $mail->Username = '4e91322af77057';
-    $mail->Password = '3635bdb35383da';
+    $mail->SMTPSecure = "tls"; 
+    $mail->Port = 587;
+    $mail->Username = 'bammm.dev@gmail.com';
+    $mail->Password = 'Aprl031999';
 
     $email_pengirim = 'bammm.dev@gmail.com'; // Isikan dengan email pengirim
     $nama_pengirim = 'sia-sia?'; // Isikan dengan nama pengirim
     $email_penerima = $email; // Ambil email penerima dari inputan form
     $subjek = 'Email dan Password sia-sia?'; // Ambil subjek dari inputan form
-    $pesan = 'halo, gunakan email dan password ini untuk login di sia-sia? </br>Email='.$email.' </br>Password='.$password.''; // Ambil pesan dari inputan form
+    $pesan = 'halo, gunakan email dan password ini untuk login di sia-sia? </br>Email=' . $email . ' </br>Password=' . $password . ''; // Ambil pesan dari inputan form
 
     //Recipients
     $mail->setFrom($email_pengirim, $nama_pengirim);
@@ -46,7 +54,7 @@ try {
     ob_start();
     include "content_email.php";
     $content = ob_get_contents(); // Ambil isi file content.php dan masukan ke variabel $content
-    ob_end_clean(); 
+    ob_end_clean();
 
     $mail->Subject = $subjek;
     $mail->Body    = $content;
@@ -57,5 +65,3 @@ try {
 } catch (Exception $e) {
     echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
 }
-
-?>

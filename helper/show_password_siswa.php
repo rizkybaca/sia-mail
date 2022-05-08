@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 $id = $_SESSION['id_siswa'];
 $data = mysqli_query($conn, "SELECT * FROM `siswa` WHERE `id_siswa`='$id' ");

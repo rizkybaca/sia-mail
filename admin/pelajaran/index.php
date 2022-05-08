@@ -37,7 +37,9 @@
                 <tbody>
                     <?php 
                         include '../helper/index_pelajaran.php';
+                        
                         if($cek > 0) :
+
 
                             //ambil data seluruh pelajaran
                             $no=1;

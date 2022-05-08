@@ -53,7 +53,7 @@ while(!feof($file)) //cari akhir baris csv
             $telepon = htmlspecialchars($data[5]);
             $alamat = htmlspecialchars($data[6]);
 
-            $result=mysqli_query($conn, "INSERT INTO `siswa` (`nama_siswa`,`nisn`,`nis`,`email`,`password`,`telepon`,`alamat`) VALUES ('$nama_siswa','$nisn','$nis','$email','$pass','$telepon','$alamat')");
+            $result=mysqli_query($conn, "REPLACE INTO `siswa` (`nama_siswa`,`nisn`,`nis`,`email`,`password`,`telepon`,`alamat`) VALUES ('$nama_siswa','$nisn','$nis','$email','$pass','$telepon','$alamat')");
 
             if ($result) {
                 //kirim email
@@ -77,5 +77,3 @@ $pesan = "Data berhasil diimpor";
 $url = "../index.php?page=siswa-index";
 
 echo "<script>alert('$pesan');location='$url';</script>";
-
-?>

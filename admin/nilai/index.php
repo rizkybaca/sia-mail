@@ -19,7 +19,7 @@ if(!isset($_POST['submit'])){
     <!-- <h1 class="h1 mb-0 text-gray-800"></h1> -->
     <a href="?page=nilai-pre-index" class="btn btn-outline-dark">kembali</a>
     <form action="?page=nilai-rekap" method="post">
-        <input type="hidden" name="pelajaran_id" value="<?= $_POST['pelajaran_id'] ?>">
+        <input type="hidden" name="pelajaran_kode" value="<?= $_POST['pelajaran_kode'] ?>">
         <input type="hidden" name="kelas_id" value="<?= $_POST['kelas_id'] ?>">
         <input type="hidden" name="kurikulum_id" value="<?= $_POST['kurikulum_id'] ?>">
         <input type="hidden" name="thn_akademik_id" value="<?= $_POST['thn_akademik_id'] ?>">

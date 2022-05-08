@@ -29,8 +29,16 @@
 
             <!-- Heading -->
             <div class="sidebar-heading">
-                Guru
+                Siswa
             </div>
+
+            <li class="nav-item">
+                <a class="nav-link" href="?page=jadwal_pelajaran-index">
+                    <!-- jan lupa ganti icon akademik -->
+                    <i class="fas fa-fw fa-cog"></i>
+                    <span>Jadwal Pelajaran</span>
+                </a>
+            </li>
 
             <li class="nav-item">
                 <a class="nav-link" href="?page=kehadiran-pre-index">

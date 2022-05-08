@@ -1,20 +1,17 @@
-<?php 
+<?php
 
 //db
 include '../../koneksi.php';
 
 //get form data
-$id_guru= $_POST['id_guru'];
-// $nip= $_POST['nip'];
-// $nama_guru= $_POST['nama_guru'];
-// $kode_guru= $_POST['kode_guru'];
-$alamat= $_POST['alamat'];
-$telepon= $_POST['telepon'];
+$id_siswa = $_POST['id_siswa'];
+$alamat = $_POST['alamat'];
+$telepon = $_POST['telepon'];
 
 // var_dump($_POST);die();
 
 //update
-$result=mysqli_query($conn, "UPDATE `guru` SET `telepon`='$telepon',`alamat`='$alamat' WHERE `id_guru`=$id_guru");
+$result = mysqli_query($conn, "UPDATE `siswa` SET `telepon`='$telepon',`alamat`='$alamat' WHERE `id_siswa`=$id_siswa");
 
 
 
@@ -23,10 +20,6 @@ $result=mysqli_query($conn, "UPDATE `guru` SET `telepon`='$telepon',`alamat`='$a
 
 if ($result) {
     header("location:../index.php?page=profil-show");
-
 } else {
     echo mysqli_error($conn);
 }
-
-?>
-

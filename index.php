@@ -13,9 +13,7 @@
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-    <link
-        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
@@ -41,35 +39,32 @@
                                         <h1 class="h4 text-gray-900 mb-4">Login Siswa</h1>
                                     </div>
 
-                                    <?php 
-                                        if(isset($_GET['pesan'])){
-                                            if($_GET['pesan'] == "gagal"){
-                                                echo '<div class="alert alert-danger" role="alert">
+                                    <?php
+                                    if (isset($_GET['pesan'])) {
+                                        if ($_GET['pesan'] == "gagal") {
+                                            echo '<div class="alert alert-danger" role="alert">
                                                 gagal, email dan password tidak ditemukan!
                                             </div>';
-                                            }else if($_GET['pesan'] == "logout"){
-                                                echo '<div class="alert alert-success" role="alert">
+                                        } else if ($_GET['pesan'] == "logout") {
+                                            echo '<div class="alert alert-success" role="alert">
                                                 anda berhasil logout!
                                             </div>';
-                                            }else if($_GET['pesan'] == "belum_login"){
-                                                echo '<div class="alert alert-danger" role="alert">
+                                        } else if ($_GET['pesan'] == "belum_login") {
+                                            echo '<div class="alert alert-danger" role="alert">
                                                 gagal, login terlebih dahulu!
                                             </div>';
-                                            }
                                         }
+                                    }
                                     ?>
 
-                                    
+
 
                                     <form class="user" method="POST" action="auth_siswa.php">
                                         <div class="form-group">
-                                            <input name="email" type="email" class="form-control form-control-user"
-                                                id="exampleInputEmail" aria-describedby="emailHelp"
-                                                placeholder="Enter Email Address...">
+                                            <input name="email" type="email" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Enter Email Address...">
                                         </div>
                                         <div class="form-group">
-                                            <input  name="password" type="password" class="form-control form-control-user"
-                                                id="exampleInputPassword" placeholder="Password">
+                                            <input name="password" type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Password">
                                         </div>
                                         <!-- <div class="form-group">
                                             <div class="custom-control custom-checkbox small">
