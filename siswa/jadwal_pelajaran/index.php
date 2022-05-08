@@ -31,11 +31,6 @@ if ($cek > 0) {
                                 <th>Ruangan</th>
                             </tr>
                         </thead>
-                        <!-- <tfoot>
-                    <tr>
-                        <th>Nomor</th>
-                    </tr>
-                </tfoot> -->
                         <tbody>
                             <?php
                             include '../helper/index_jadwal_pelajaran_siswa_all.php';

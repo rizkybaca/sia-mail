@@ -40,21 +40,19 @@
                 </a>
             </li>
 
-            <li class="nav-item">
-                <a class="nav-link" href="?page=kehadiran-pre-index">
-                    <!-- jan lupa ganti icon akademik -->
+            <!-- <li class="nav-item">
+                <a class="nav-link" href="?page=kehadiran-rekap">
                     <i class="fas fa-fw fa-cog"></i>
                     <span>Kehadiran</span>
                 </a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="?page=nilai-pre-index">
-                    <!-- jan lupa ganti icon akademik -->
+                <a class="nav-link" href="?page=nilai-rekap">
                     <i class="fas fa-fw fa-cog"></i>
                     <span>Nilai</span>
                 </a>
-            </li>
+            </li> -->
 
             <!-- Divider -->
             <hr class="sidebar-divider">
@@ -65,7 +63,7 @@
             </div>
 
             <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="?page=bantuan-index">
                     <!-- jan lupa ganti icon akademik -->
                     <i class="fas fa-fw fa-cog"></i>
                     <span>Bantuan</span>

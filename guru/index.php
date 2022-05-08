@@ -115,7 +115,7 @@ if (isset($_GET['page'])) {
 <footer class="sticky-footer bg-white">
     <div class="container my-auto">
         <div class="copyright text-center my-auto">
-            <span>Copyright &copy; sia-sia? <?= date('Y') ?></span>
+            <span>Copyright &copy; <?= $_SESSION['nama_sistem'] . ' by ' . $_SESSION['pengembang'] ?> <?= date('Y') ?></span>
         </div>
     </div>
 </footer>
