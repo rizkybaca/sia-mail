@@ -1,18 +1,21 @@
-<?php 
+<?php
 
 //db
 include '../../koneksi.php';
 
-//get form data
-$id_dtl_nilai= $_POST['id_dtl_nilai'];
-$nilai_id= $_POST['nilai_id'];
-$data_nilai= $_POST['data_nilai'];
 
+
+// start
+// hitung jumlah baris
+$row_count = count($_POST['id_dtl_nilai']);
+for ($i = 0; $i < $row_count; $i++) {
+    $result = mysqli_query($conn, "UPDATE `detail_nilai` SET `data_nilai`='" . $_POST['data_nilai'][$i] . "' WHERE `id_dtl_nilai`=" . $_POST['id_dtl_nilai'][$i] . "");
+}
 
 // var_dump($_POST);die();
 
 //update
-$result=mysqli_query($conn, "UPDATE `detail_nilai` SET `data_nilai`='$data_nilai' WHERE `id_dtl_nilai`=$id_dtl_nilai");
+
 
 
 
@@ -20,11 +23,7 @@ $result=mysqli_query($conn, "UPDATE `detail_nilai` SET `data_nilai`='$data_nilai
 //jika berhasil maka tampilkan pesan sukses
 
 if ($result) {
-    header("location:../index.php?page=detail_nilai-index&id_nilai=".$nilai_id."");
-
+    header("location:../index.php?page=detail_nilai-index&id_nilai=" . $_POST['nilai_id'] . "");
 } else {
     echo mysqli_error($conn);
 }
-
-?>
-

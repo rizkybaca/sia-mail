@@ -116,9 +116,9 @@ if (!isset($_GET['id_kehadiran'])) {
                 <div class="card-footer py-3 d-flex justify-content-between">
                     <h1></h1>
                     <button type="submit" class="btn btn-primary">Simpan</button>
+                </div>
             </form>
         </div>
-    </div>
 
     </div>
     <!-- /.container-fluid -->

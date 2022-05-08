@@ -72,7 +72,7 @@ if(!isset($_POST['submit'])){
                         <td><?= $keyj['jenis_ujian'] ?></td>
                         <td><?= $keyj['nama_tugas'] ?></td>
                         <td>
-                            <a href="?page=detail_nilai-index&id_nilai=<?= $keyj['id_nilai'] ?>" class="badge badge-warning">edit</a>
+                            <a href="?page=detail_nilai-index&id_nilai=<?= $keyj['id_nilai'] ?>" class="badge badge-success">buka detail nilai siswa</a>
                         </td>
                     </tr>
                     <?php 

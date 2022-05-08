@@ -23,6 +23,7 @@ if ($cek > 0) {
     if (password_verify($password, $row['password'])) {
         if ($row['role'] == 'Siswa') {
             $_SESSION['email'] = $email;
+            $_SESSION['nisn'] = $row['nisn'];
             $_SESSION['id_siswa'] = $row['id_siswa'];
             $_SESSION['nama_siswa'] = $row['nama_siswa'];
             $_SESSION['status'] = "login";
@@ -30,8 +31,8 @@ if ($cek > 0) {
             header("location:siswa/index.php");
         }
     } else {
-        header("location:index_siswa.php?pesan=gagal");
+        header("location:index.php?pesan=gagal");
     }
 } else {
-    header("location:index_siswa.php?pesan=gagal");
+    header("location:index.php?pesan=gagal");
 }

@@ -352,6 +352,14 @@ if (isset($_GET['page'])) {
             include 'sistem/edit.php';
             break;
 
+            // manajemen bantuan
+        case 'bantuan-index':
+            include 'bantuan/index.php';
+            break;
+        // case 'bantuan-edit':
+        //     include 'bantuan/edit.php';
+        //     break;
+
         default:
             echo "<center><h1> ERROR !</h1></center>";
             break;
